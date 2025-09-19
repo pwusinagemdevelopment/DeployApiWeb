@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>COLETOR</name>
+    </assembly>
+    <members>
+        <member name="T:COLETOR.Domain.Repositories.ApiDataService`1">
+            <summary>
+            Classe responsável por encapsular dados de resposta de uma API, incluindo mensagens de erro e status de erro.
+            </summary>
+            <typeparam name="T">O tipo de dado encapsulado pela resposta da API.</typeparam>
+        </member>
+        <member name="P:COLETOR.Domain.Repositories.ApiDataService`1.Data">
+            <summary>
+            Obtém ou define os dados da resposta da API.
+            </summary>
+        </member>
+        <member name="P:COLETOR.Domain.Repositories.ApiDataService`1.MessageError">
+            <summary>
+            Obtém ou define a mensagem de erro associada à resposta da API.
+            </summary>
+        </member>
+        <member name="P:COLETOR.Domain.Repositories.ApiDataService`1.IsError">
+            <summary>
+            Obtém ou define um valor que indica se ocorreu um erro na resposta da API.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.ApiDataService`1.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:COLETOR.Domain.Repositories.ApiDataService`1"/>.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.ApiDataService`1.#ctor(`0,System.Boolean,System.String)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:COLETOR.Domain.Repositories.ApiDataService`1"/> com os dados, status de erro e mensagem fornecidos.
+            </summary>
+            <param name="data">Os dados da resposta da API.</param>
+            <param name="isError">Indica se ocorreu um erro na resposta da API.</param>
+            <param name="message">A mensagem de erro associada à resposta da API.</param>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.ApiDataService`1.EnsureDataInstance(`0)">
+            <summary>
+            Garante que a propriedade <see cref="P:COLETOR.Domain.Repositories.ApiDataService`1.Data"/> seja instanciada se aplicável.
+            </summary>
+            <param name="data">Os dados da resposta da API.</param>
+            <returns>Retorna uma nova instância do tipo <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="T:COLETOR.Domain.Repositories.EnumHelper">
+            <summary>
+            A classe EnumHelper fornece métodos auxiliares para trabalhar com enums.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.EnumHelper.GetEnumDisplayNameValuePairs``1">
+            <summary>
+            Obtém uma lista de pares (DisplayName, Value) para um enum especificado.
+            </summary>
+            <typeparam name="T">O tipo do enum.</typeparam>
+            <returns>Uma lista de tuplas contendo o nome de exibição e o valor do enum.</returns>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.EnumHelper.GetEnumDisplayNames``1">
+            <summary>
+            Obtém uma lista de nomes de exibição para um enum especificado.
+            </summary>
+            <typeparam name="T">O tipo do enum.</typeparam>
+            <returns>Uma lista de strings contendo os nomes de exibição do enum.</returns>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.EnumHelper.GetEnumDisplayName``1(``0)">
+            <summary>
+            Obtém o nome de exibição (Display.Name) de um valor do enum.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.EnumHelper.GetEnumDescription``1(``0)">
+            <summary>
+            Obtém a descrição (Description) de um valor do enum.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.EnumHelper.GetEnumAttribute``2(``0)">
+            <summary>
+            Obtém um atributo específico de um valor do enum.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.EnumHelper.GetEnumValue``1(``0)">
+            <summary>
+            Obtém o valor numérico do enum.
+            </summary>
+        </member>
+        <member name="T:COLETOR.Domain.Repositories.HandleThePassword">
+            <summary>
+            Classe estática responsável por manipular senhas, incluindo criptografia e verificação.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.HandleThePassword.EncriptarSenha(System.String)">
+            <summary>
+            Encripta a senha fornecida usando um algoritmo simples de transformação de caracteres.
+            </summary>
+            <param name="cSenha">A senha a ser encriptada.</param>
+            <returns>Retorna a senha encriptada como uma string.</returns>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.HandleThePassword.Crypt(System.String)">
+            <summary>
+            Criptografa o texto fornecido invertendo os valores ASCII dos caracteres.
+            </summary>
+            <param name="text">O texto a ser criptografado.</param>
+            <returns>Retorna o texto criptografado como uma string.</returns>
+            <exception cref="T:System.ArgumentException">Lançada se o texto for nulo ou vazio.</exception>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.HandleThePassword.IsCripted(System.String)">
+            <summary>
+            Verifica se a senha fornecida está criptografada.
+            </summary>
+            <param name="senha">A senha a ser verificada.</param>
+            <returns>Retorna true se a senha estiver criptografada; caso contrário, false.</returns>
+        </member>
+        <member name="T:COLETOR.Domain.Repositories.RequestResponse`1">
+            <summary>
+            Classe responsável por realizar requisições HTTP GET e POST para uma API.
+            </summary>
+            <typeparam name="T">O tipo de dado esperado na resposta das requisições GET.</typeparam>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.RequestResponse`1.PostAsync``2(``0,System.String)">
+            <summary>
+            Envia uma solicitação HTTP POST assíncrona para a URL especificada com os dados fornecidos.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.RequestResponse`1.GetAsync(System.String,System.Int32)">
+            <summary>
+            Realiza uma solicitação HTTP GET assíncrona com timeout configurável.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.RequestResponse`1.GetAsync(System.String)">
+            <summary>
+            Realiza uma solicitação HTTP GET assíncrona com autenticação.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.RequestResponse`1.GetAsync``2(System.String,``0)">
+            <summary>
+            Realiza uma solicitação HTTP GET assíncrona com parâmetros.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.RequestResponse`1.DeleteAsync``2(System.String,``0)">
+            <summary>
+            Envia uma solicitação HTTP DELETE assíncrona.
+            </summary>
+        </member>
+        <member name="T:COLETOR.Domain.Repositories.SystemInfoService">
+            <summary>
+            Classe responsável por obter informações sobre o sistema operacional em que a aplicação está sendo executada.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.SystemInfoService.GetOperatingSystem">
+            <summary>
+            Obtém o tipo de sistema operacional.
+            </summary>
+            <returns>Retorna uma enum indicando o sistema operacional (Windows, Linux, macOS, Android ou Unknown OS).</returns>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.TokenService.SaveTokenAsync(System.String)">
+            <summary>
+            Salva o token de autenticação no armazenamento seguro.
+            </summary>
+            <param name="token">Token JWT.</param>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.TokenService.GetTokenAsync">
+            <summary>
+            Recupera o token de autenticação do armazenamento seguro.
+            </summary>
+            <returns>O token JWT, ou null se não existir.</returns>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.TokenService.DeleteTokenAsync">
+            <summary>
+            Método assíncrono para excluir um token armazenado de forma segura.
+            </summary>
+            <returns>Uma tarefa que representa a operação assíncrona.</returns>
+            <exception cref="T:System.Exception">Lançada quando ocorre um erro ao excluir o token.</exception>
+            <remarks>
+            Este método utiliza o SecureStorage para remover um token armazenado de forma segura.
+            Em caso de erro, uma mensagem de erro é registrada no console.
+            </remarks>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.TokenService.DeleteToken">
+            <summary>
+            Exclui o token de autenticação do armazenamento seguro.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.TokenService.SaveRefreshTokenAsync(System.String)">
+            <summary>
+            Salva o refresh token no armazenamento seguro.
+            </summary>
+            <param name="refreshToken">Token de atualização.</param>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.TokenService.GetRefreshTokenAsync">
+            <summary>
+            Recupera o refresh token do armazenamento seguro.
+            </summary>
+            <returns>O refresh token, ou null se não existir.</returns>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.TokenService.DeleteRefreshToken">
+            <summary>
+            Exclui o refresh token do armazenamento seguro.
+            </summary>
+        </member>
+        <member name="M:COLETOR.Domain.Repositories.TokenService.IsTokenValid(System.String,System.Int32)">
+            <summary>
+            Valida o token localmente verificando sua estrutura básica.
+            </summary>
+            <param name="token">Token JWT.</param>
+            <returns>True se o token for válido, false caso contrário.</returns>
+        </member>
+        <member name="T:COLETOR.Shared.Enums.TargetOSTypeEnum">
+            <summary>
+            Enumeração que representa os diferentes tipos de sistemas operacionais suportados.
+            </summary>
+        </member>
+        <member name="F:COLETOR.Shared.Enums.TargetOSTypeEnum.Windows">
+            <summary>
+            Representa o sistema operacional Windows.
+            </summary>
+        </member>
+        <member name="F:COLETOR.Shared.Enums.TargetOSTypeEnum.Linux">
+            <summary>
+            Representa o sistema operacional Linux.
+            </summary>
+        </member>
+        <member name="F:COLETOR.Shared.Enums.TargetOSTypeEnum.MacOS">
+            <summary>
+            Representa o sistema operacional macOS.
+            </summary>
+        </member>
+        <member name="F:COLETOR.Shared.Enums.TargetOSTypeEnum.Android">
+            <summary>
+            Representa o sistema operacional Android.
+            </summary>
+        </member>
+        <member name="F:COLETOR.Shared.Enums.TargetOSTypeEnum.OSX">
+            <summary>
+            Representa o sistema operacional OSX.
+            </summary>
+        </member>
+        <member name="F:COLETOR.Shared.Enums.TargetOSTypeEnum.Unknown">
+            <summary>
+            Representa um sistema operacional desconhecido.
+            </summary>
+        </member>
+        <member name="T:COLETOR.Shared.Utilities.TempMessageStore">
+            <summary>
+            Armazena mensagens temporárias que devem ser exibidas assim que possível.
+            </summary>
+        </member>
+        <member name="P:COLETOR.Shared.Utilities.TempMessageStore.PendingErrorMessage">
+            <summary>
+            Mensagem de erro que deve ser exibida na próxima página.
+            Após ser lida, deve ser apagada.
+            </summary>
+        </member>
+        <member name="T:COLETOR.ViewModels.MainPageViewModel">
+            <summary>
+            Não esta sendo utilizada
+            </summary>
+        </member>
+    </members>
+</doc>
