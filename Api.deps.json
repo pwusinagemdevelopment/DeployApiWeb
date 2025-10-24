@@ -48,6 +48,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0",
           "Swashbuckle.AspNetCore": "7.2.0",
+          "CatracaHenryComunicacao": "1.0.0.0",
           "Microsoft.AspNetCore.Antiforgery": "9.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "9.0.0.0",
           "Microsoft.AspNetCore.Authentication.BearerToken": "9.0.0.0",
@@ -1720,6 +1721,17 @@
         },
         "compile": {
           "Infrastructure.dll": {}
+        }
+      },
+      "CatracaHenryComunicacao/1.0.0.0": {
+        "runtime": {
+          "CatracaHenryComunicacao.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "CatracaHenryComunicacao.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/9.0.0.0": {
@@ -4340,6 +4352,11 @@
     },
     "Infrastructure/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CatracaHenryComunicacao/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
